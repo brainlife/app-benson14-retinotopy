@@ -1,0 +1,57 @@
+[
+    {
+        "name": "no visual area",
+        "desc": "no visual area",
+        "voxel_value": 0
+    },
+    {
+        "name": "V1",
+        "label": "400",
+        "voxel_value": 1
+    },
+    {
+        "name": "V2",
+        "label": "401",
+        "voxel_value": 2
+    },
+    {
+        "name": "V3",
+        "voxel_value": 3
+    },
+    {
+        "name": "hV4",
+        "voxel_value": 4
+    },
+    {
+        "name": "VO1",
+        "voxel_value": 5
+    },
+    {
+        "name": "VO2",
+        "voxel_value": 6
+    },
+    {
+        "name": "LO1",
+        "voxel_value": 7
+    },
+    {
+        "name": "LO2",
+        "voxel_value": 8
+    },
+    {
+        "name": "TO1",
+        "voxel_value": 9
+    },
+    {
+        "name": "TO2",
+        "voxel_value": 10
+    },
+    {
+        "name": "V3b",
+        "voxel_value": 11
+    },
+    {
+        "name": "V3a",
+        "voxel_value": 12
+    }
+]

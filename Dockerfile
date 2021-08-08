@@ -1,10 +1,7 @@
-FROM brainlife/freesurfer:6.0.0
+FROM brainlife/freesurfer-stats:1.2
 
-RUN apt-get update && apt-get -y install python-pip
-RUN apt-get -y install default-jdk
-RUN pip install --upgrade pip 
-RUN pip install
-RUN pip install numpy scipy six pimms neuropythy
+RUN pip3 install --upgrade pip
+RUN pip3 install neuropythy
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
