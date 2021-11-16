@@ -6,7 +6,7 @@
 #set -x
 
 # grab important input configs
-fsdir=`jq -r '.fsdir' config.json`
+fsdir=`jq -r '.freesurfer' config.json`
 template=`jq -r '.template' config.json`	
 
 # make local copy of freesurfer directory
