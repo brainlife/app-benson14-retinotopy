@@ -132,7 +132,7 @@ fi
 # 		[ ! -f prf/prf_surfaces/${h}.r2 ] && mri_binarize --i ./prf/prf_surfaces/${h}.varea --min 1 --max 100 --o ./${h}.r2.gii && mris_convert -c ./${h}.r2.gii ./output/surf/${h}.white ./prf/prf_surfaces/${h}.r2
 # 	done
 # fi
-if [ ! -f prf/prf_surfaces/rh.r2 ]; then
-	echo "creating binary surface files of visual vertices for visualizer"
-	./create_R2.py ./prf/prf_surfaces/rh.varea ./prf/prf_surfaces/lh.varea
-fi
+#if [ ! -f prf/prf_surfaces/rh.r2 ]; then
+#	echo "creating binary surface files of visual vertices for visualizer"
+#	./create_R2.py ./prf/prf_surfaces/rh.varea ./prf/prf_surfaces/lh.varea
+#fi
