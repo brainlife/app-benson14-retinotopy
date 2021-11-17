@@ -26,7 +26,7 @@ time singularity exec -e -B `pwd`/license.txt:/usr/local/freesurfer/license.txt 
 
 if [ ! -f prf/prf_surfaces/rh.r2 ]; then
 	echo "creating binary surface files of visual vertices for visualizer"
-	time singularity exec -e -B `pwd`/license.txt:/usr/local/freesurfer/license.txt docker://brainlife/freesurfer-stats python3 ./create_R2.py ./prf/prf_surfaces/rh.varea ./prf/prf_surfaces/lh.varea
+	time singularity exec -e docker://brainlife/dipy:1.4.0 python3 ./create_R2.py ./prf/prf_surfaces/rh.varea ./prf/prf_surfaces/lh.varea
 fi
 
 	
