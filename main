@@ -10,7 +10,7 @@ fsdir=`jq -r '.freesurfer' config.json`
 template=`jq -r '.template' config.json`	
 
 # make local copy of freesurfer directory
-[ ! -d output ] && cp -R ${fsdir} output && chmod -R +w  ./output/*
+[ ! -d output ] && cp -LR ${fsdir} output && chmod -R +w  ./output/*
 
 # fit benson predicted prf based purely on anatomy: templates can be eitehr benson17 or benson14 
 [ ! -f ./output/mri/benson14_eccen.nii.gz ] && singularity exec -e -B ./:/subjects docker://nben/neuropythy:latest \
