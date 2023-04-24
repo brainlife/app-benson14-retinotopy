@@ -10,7 +10,7 @@ surfaces="white pial sphere inflated"
 hemispheres="lh rh"
 
 # make output directories
-[ ! -d prf ] && mkdir -p prf prf/prf_surfaces
+[ ! -d prf ] && mkdir -p prf prf/prf_surfaces prf/surfaces
 [ ! -d varea ] && mkdir -p ./varea ./varea_surface
 [ ! -d surfaces ] && mkdir -p surfaces surfaces/left surfaces/right
 [ ! -d parc_deprecated ] && mkdir -p parc_deprecated
@@ -28,7 +28,7 @@ if [ ! -f prf/prf_surfaces/rh.inflated.vtk ]; then
 	do
 		for surf in ${surfaces}
 		do
-			[ ! -f prf/prf_surfaces/${h}.${surf}.vtk ] && mris_convert --to-scanner ./output/surf/${h}.${surf} prf/prf_surfaces/${h}.${surf}.vtk
+			[ ! -f prf/surfaces/${h}.${surf}.vtk ] && mris_convert --to-scanner ./output/surf/${h}.${surf} prf/surfaces/${h}.${surf}.vtk
 		done
 	done
 fi
@@ -56,7 +56,7 @@ if [ ! -f prf/prf_surfaces/rh.varea ]; then
 		
 		for h in ${hemispheres}
 		do
-			[ ! -f prf/prf_surfaces/${h}.${output_name} ] && mv prf/prf_surfaces/${h}.*_${prf} prf/prf_surfaces/${h}.${output_name}
+			[ ! -f prf/prf_surfaces/${h}.${output_name} ] && mv prf/prf_surfaces/${h}.*_${prf} prf/prf_surfaces/${h}.${output_name} && mris_convert -c ./prf/prf_surfaces/${h}.${output_name} ./output/surf/${h}.white ./prf/prf_surfaces/${h}.${output_name}.gii
 		done
 	done
 fi
